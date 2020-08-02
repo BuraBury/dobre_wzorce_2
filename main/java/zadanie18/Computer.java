@@ -61,7 +61,7 @@ public class Computer {
         this.ram = ram;
     }
 
-    public String getGraficCard() {
+    public String getGraphicCard() {
         return graphicCard;
     }
 
