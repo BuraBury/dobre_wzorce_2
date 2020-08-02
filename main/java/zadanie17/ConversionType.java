@@ -7,6 +7,4 @@ public enum ConversionType {
     INCHES_TO_CENTIMETERS,
     KILOMETERS_TO_MILES,
     MILES_TO_KILOMETERS;
-
-
 }
