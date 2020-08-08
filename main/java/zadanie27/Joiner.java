@@ -1,22 +1,18 @@
 package zadanie27;
 
 public class Joiner<T> {
-    private String separator = "-";
+    private String separator;
 
-    void join(int i, T t) {
-        for (int j = 1; j <= i; j++) {
-            add(t);
-            if (j == i - 1) {
-                setSeparatorForLastElement();
-            }
+    public Joiner(String separator) {
+        this.separator = separator;
+    }
+
+    public String join(T... values) {
+        StringBuilder text = new StringBuilder(values[0].toString());
+        for (int i = 1; i < values.length; i++) {
+            text.append(separator);
+            text.append(values[i].toString());
         }
-    }
-
-    private void add(T t) {
-        System.out.print(t + separator);
-    }
-
-    private void setSeparatorForLastElement() {
-        this.separator = ". ";
+        return text.toString();
     }
 }
